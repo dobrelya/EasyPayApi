@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
+<<<<<<< HEAD
+  name="EasyPayApi"
+  id="myeclipse.1417745164875"
+  context-root="/EasyPayApi"
+  j2ee-spec="5.0"
+  archive="EasyPayApi.war">
+=======
   name="EasyPay"
   id="myeclipse.1417669560359"
   context-root="/EasyPay"
   j2ee-spec="6.0"
   archive="EasyPay.war">
+>>>>>>> 9c5aa92491ab34654f6ca78edfc6b9b69324c2d9
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>

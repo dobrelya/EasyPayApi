@@ -8,6 +8,14 @@
 	http://www.springframework.org/schema/context/spring-context-4.0.xsd 
 	http://www.springframework.org/schema/mvc 
 	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+<<<<<<< HEAD
+	<import resource="classpath:config/spring-mybatis.xml" />
+	<!-- 创建SqlSessionFactory，同时指定数据源 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 指定sqlMapConfig总配置文件，订制的environment在spring容器中不在生效 -->
+		<property name="configLocation" value="classpath:config/sqlMapConfig.xml" />
+=======
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	<context:component-scan base-package="com.cn.easypay.action" />
 	<!--避免IE执行AJAX时，返回JSON出现下载文件 -->
@@ -48,5 +56,6 @@
 		<property name="maxUploadSize" value="10485760000" />
 		<!-- 内存中的最大值 -->
 		<property name="maxInMemorySize" value="40960" />
+>>>>>>> 9c5aa92491ab34654f6ca78edfc6b9b69324c2d9
 	</bean>
 </beans>

@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+<<<<<<< HEAD
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	<!-- 引入jdbc配置文件 -->
+	<context:property-placeholder location="classpath:config/jdbc.properties" />
+
+	<!--创建jdbc数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+
+		<property name="driverClassName" value="${driver}" />
+
+		<property name="url" value="${url}" />
+
+		<property name="username" value="${username}" />
+
+		<property name="password" value="${password}" />
+
+		<property name="initialSize" value="${initialSize}" />
+
+		<property name="maxActive" value="${maxActive}" />
+
+		<property name="maxIdle" value="${maxIdle}" />
+
+		<property name="minIdle" value="${minIdle}" />
+
+	</bean>
+
+
+	<!-- 创建SqlSessionFactory，同时指定数据源 -->
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource" />
+
+	</bean>
+
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	<!--创建数据映射器，数据映射器必须为接口 -->
+
+	<bean id="hotelMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+
+		<property name="mapperInterface" value="com.cn.tfb.mapper.HotelMapper" />
+
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+
+	</bean>
+
+	<bean id="hotelDaoImpl" class="com.cn.tfb.dao.impl.HotelDaoImpl">
+
+		<property name="hotelMapper" ref="hotelMapper" />
+
+	</bean>
+
+
+=======
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
@@ -113,4 +177,5 @@
 		<aop:advisor advice-ref="druid-stat-interceptor"
 			pointcut-ref="druid-stat-pointcut" />
 	</aop:config>
+>>>>>>> 9c5aa92491ab34654f6ca78edfc6b9b69324c2d9
 </beans>

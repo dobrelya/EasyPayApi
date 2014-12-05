@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
     <wb-module deploy-name="EasyPay">
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="/EasyPay"/>
         <property name="java-output-path" value="/EasyPay/WebRoot/WEB-INF/classes"/>
+=======
+    <wb-module deploy-name="EasyPayApi">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="/EasyPayApi"/>
+        <property name="java-output-path" value="/EasyPayApi/WebRoot/WEB-INF/classes"/>
+>>>>>>> 7f795f0389adb994396f78d8ae6dfd29cdb62b4b
     </wb-module>
 </project-modules>

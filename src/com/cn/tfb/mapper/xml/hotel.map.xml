@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.cn.tfb.entity.HotelEntity">
+	<resultMap type="Hotel" id="hotelMapper">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="password" column="password" />
+		<result property="createTime" column="createtime" />
+	</resultMap>
+	<select id="getHotelById" parameterType="Hotel" resultMap="hotelMapper">
+		select *
+		from ctrip_hotel where id = #{id}
+	</select>
+</mapper>
