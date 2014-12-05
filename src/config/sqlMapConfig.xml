@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.cn.tfb.entity.HotelEntity" alias="Hotel" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/cn/tfb/mapper/xml/hotel.map.xml" />
+	</mappers>
+</configuration>
