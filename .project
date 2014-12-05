@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>EasyPayApi</name>
+=======
+	<name>EasyPay</name>
+>>>>>>> 9c5aa92491ab34654f6ca78edfc6b9b69324c2d9
 	<comment></comment>
 	<projects>
 	</projects>
